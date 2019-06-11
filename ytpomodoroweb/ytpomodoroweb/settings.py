@@ -24,13 +24,19 @@ SECRET_KEY = '!8l0k@%s+=*nv9nfd#o5muu&*v^0#eq4k*s!c_0x&$4_8=2&cl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+PRODUCTION = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+'http://127.0.0.1:8000/',
+'127.0.0.1',
+]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'core',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,7 +60,7 @@ ROOT_URLCONF = 'ytpomodoroweb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -105,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -117,4 +123,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+
+# Local files
 STATIC_URL = '/static/'
+
+# Copy data from here to server
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    #'/var/www/static/',
+]
+# Server emmumator. One up DIR
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
+
+MEDIA_URL = "/media_cdn/"
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")

@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Youtube here</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="{% static 'base/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+	
+	<!-- Custom styles for this template -->
+	<link href="{% static 'base/css/youtube-full-width-player.css' %}" rel="stylesheet">
+</head>
+
+<body>
+	<!-- Page Content -->
+	<div class="videoWrapper">
+		<!-- Copy & Pasted from YouTube -->
+		<!-- <iframe width="560" height="349" src="https://www.youtube.com/watch?v={{yt_string}}" frameborder="0" allowfullscreen></iframe> -->
+
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/{{yt_string}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+	</div>
+	<!-- Bootstrap core JavaScript -->
+	<script src="{% static 'base/vendor/jquery/jquery.min.js' %}"></script>
+	<script src="{% static 'base/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+</html>
