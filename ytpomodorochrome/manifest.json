@@ -1,5 +1,18 @@
 {
-	'name' : 'Youtube Pomodoro Chrome Extension',
-	'version' : '1.0',
-	'manifest_version' : 2,
+	"name" : "Youtube Pomodoro Chrome Extension",
+	"version" : "1.0",
+	"manifest_version" : 2,
+	"description" : "A Pomodoro Timer App which lets you watch Youtube Videos as a break",
+	"author": "Ali Khundmiri",
+	"background": {
+		"persistent": true,
+		"scripts": [
+			"js/background.js"
+		]
+		
+	},
+	"permissions": [
+		"contextMenus"
+	]
+
 }
