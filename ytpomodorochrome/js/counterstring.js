@@ -1,6 +1,6 @@
 /*
-    The initial JavaScript code to create the counterstrings
-    run from Snippets in Chrome Dev Tools
+The initial JavaScript code to create the counterstrings
+run from Snippets in Chrome Dev Tools
 */
 function reverseString(reverseMe){
     return reverseMe.split("").reverse().join("");
